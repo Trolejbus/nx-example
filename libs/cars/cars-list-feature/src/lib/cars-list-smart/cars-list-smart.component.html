@@ -1,5 +1,5 @@
 <div style="padding: 10px; background-color: darkgrey">
-  <a [routerLink]="['/form']">Add car</a>
+  <a [routerLink]="['/form']" data-cy="AddCar">Add car</a>
 </div>
 
-<lib-cars-list-dumb [cars]="cars"></lib-cars-list-dumb>
+<lib-cars-list-dumb data-cy="List" [cars]="cars"></lib-cars-list-dumb>

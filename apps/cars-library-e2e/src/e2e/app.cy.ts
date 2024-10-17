@@ -1,13 +1,16 @@
 import { getGreeting } from '../support/app.po';
 
 describe('cars-library-e2e', () => {
-  beforeEach(() => cy.visit('/'));
-
-  it('should display welcome message', () => {
-    // Custom command example, see `../support/commands.ts` file
-    cy.login('my-email@something.com', 'myPassword');
-
-    // Function helper example, see `../support/app.po.ts` file
-    getGreeting().contains(/Welcome/);
+  it('created cars should appear on list', () => {
+    cy.visit('/');
+    cy.get('[data-cy=AddCar]').click();
+    cy.get('[data-cy=Brand]').select('BMW');
+    cy.get('[data-cy=Model]').type('Some random model name');
+    cy.get('[data-cy=Submit]').click();
+    cy.get('[data-cy=List]').should('be.visible');
+    cy.get('[data-cy=Row]').eq(0).should('contain.text', 'BMW');
+    cy.get('[data-cy=Row]')
+      .eq(0)
+      .should('contain.text', 'Some random model name');
   });
 });

@@ -3,7 +3,10 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "npx nx run cars-library:serve"
+    "start": "npx nx run cars-library:serve",
+    "test": "nx run-many -t test",
+    "e2e": "npx nx e2e cars-library-e2e",
+    "e2e-open": "npx nx open-cypress cars-library-e2e"
   },
   "private": true,
   "dependencies": {
@@ -49,6 +52,7 @@
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
     "jest-preset-angular": "~14.1.0",
+    "ng-mocks": "^14.13.1",
     "nx": "20.0.1",
     "prettier": "^2.6.2",
     "ts-jest": "^29.1.0",
