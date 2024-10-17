@@ -14,7 +14,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@org/cars-domain": ["libs/cars/cars-domain/src/index.ts"],
+      "@org/cars-form-feature": ["libs/cars/cars-form-feature/src/index.ts"],
+      "@org/cars-list-feature": ["libs/cars/cars-list-feature/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
