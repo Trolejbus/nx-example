@@ -2,7 +2,9 @@
   "name": "@org/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "start": "npx nx run cars-library:serve"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~18.2.0",

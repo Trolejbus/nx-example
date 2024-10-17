@@ -1,1 +1,2 @@
-export * from './lib/cars-domain/cars-domain.component';
+export * from './lib/car.model';
+export * from './lib/car.service';

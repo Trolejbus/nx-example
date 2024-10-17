@@ -1,1 +1,18 @@
-<p>cars-form-feature works!</p>
+<div style="padding: 20px">
+  <h1>Add car</h1>
+  <form [formGroup]="carForm" (ngSubmit)="submit()">
+    <div style="padding: 5px 0; display: flex; gap: 20px">
+      <label>Brand</label>
+      <select formControlName="brand">
+        <option>BMW</option>
+        <option>Volvo</option>
+        <option>Audi</option>
+      </select>
+    </div>
+    <div style="padding: 5px 0; display: flex; gap: 20px">
+      <label>Model</label>
+      <input type="text" formControlName="model" />
+    </div>
+    <button type="submit">Create</button>
+  </form>
+</div>

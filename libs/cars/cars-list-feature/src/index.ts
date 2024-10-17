@@ -1,1 +1,1 @@
-export * from './lib/cars-list-feature/cars-list-feature.component';
+export * from './lib/routes';
